@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="RP.css">
+    <title>Advance Battleship</title>
+
+</head>
+
+<body>
+
+    <h1>PACIFIC WARFARE</h1>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">玩家1(大日本帝國)</div>
+        <div class="col-sm-2"><a href="rules.html" target="blank"><button class="button2 btn-primary">規則</button></a></div>
+        <div class="col-sm-3">玩家2(美利堅合眾國)</div>
+        <div class="col-sm-2"></div>
+    </div>
+    <br id="nothing1">
+    <div class="row">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-2"><button class="button2 btn-primary" id="startGame">開始遊戲</button></div>
+        <div class="col-sm-5"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="padding-left: 195px;text-align: center;">
+            <table id="table1" style="display: none">
+                <tr>
+                    <th>艦種</th>
+                    <th>圖示</th>
+                    <th>血量</th>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="carrier.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Shokaku.png" alt="Shokaku "></th>
+                    <th>
+                        <p id="healthCV1-1-5">5</p>
+                        <p id="healthCV1-1-4" style="display: none;">4</p>
+                        <p id="healthCV1-1-3" style="display: none;">3</p>
+                        <p id="healthCV1-1-2" style="display: none;">2</p>
+                        <p id="healthCV1-1-1" style="display: none;">1</p>
+                        <p id="healthCV1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>1</th>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-1">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-1">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-1">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-1">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-1">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-1">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-1">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-2">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-2">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-2">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-2">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-2">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-2">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-2">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-3">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-3">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-3">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-3">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-3">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-3">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-3">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-4">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-4">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-4">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-4">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-4">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-4">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-4">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-5">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-5">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-5">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-5">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-5">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-5">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-5">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-6">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-6">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-6">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-6">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-6">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-6">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-6">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-1-1-7">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-1-1-7">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-1-1-7">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-1-1-7">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-1-1-7">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DE-1-1-7">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-1-1-7">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="battleship.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Yamato.png " alt="Yamato "></th>
+                    <th>
+                        <p id="healthBB1-1-7">7</p>
+                        <p id="healthBB1-1-6" style="display: none;">6</p>
+                        <p id="healthBB1-1-5" style="display: none;">5</p>
+                        <p id="healthBB1-1-4" style="display: none;">4</p>
+                        <p id="healthBB1-1-3" style="display: none;">3</p>
+                        <p id="healthBB1-1-2" style="display: none;">2</p>
+                        <p id="healthBB1-1-1" style="display: none;">1</p>
+                        <p id="healthBB1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>2</th>
+                    <td>
+                        <img id="CV-1-2-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-2-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-2-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-2-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-2-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-2-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-2-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-2-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-2-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-2-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-2-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-2-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-2-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Ibuki.png " alt="Ibuki "></th>
+                    <th>
+                        <p id="healthCA1-1-4">4</p>
+                        <p id="healthCA1-1-3" style="display: none;">3</p>
+                        <p id="healthCA1-1-2" style="display: none;">2</p>
+                        <p id="healthCA1-1-1" style="display: none;">1</p>
+                        <p id="healthCA1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>3</th>
+                    <td>
+                        <img id="CV-1-3-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-3-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-3-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-3-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-3-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-3-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-3-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-3-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-3-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-3-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-3-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-3-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-3-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Yahagi.png " alt="Yahagi "></th>
+                    <th>
+                        <p id="healthCL1-1-4">4</p>
+                        <p id="healthCL1-1-3" style="display: none;">3</p>
+                        <p id="healthCL1-1-2" style="display: none;">2</p>
+                        <p id="healthCL1-1-1" style="display: none;">1</p>
+                        <p id="healthCL1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>4</th>
+                    <td>
+                        <img id="CV-1-4-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-4-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-4-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-4-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-4-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-4-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-4-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-4-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-4-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-4-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-4-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-4-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-4-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="destroyer.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Shimakaze.png " alt="Shimakaze "></th>
+                    <th>
+                        <p id="healthDD1-1-2">2</p>
+                        <p id="healthDD1-1-1" style="display: none;">1</p>
+                        <p id="healthDD1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>5</th>
+                    <td>
+                        <img id="CV-1-5-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-5-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-5-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-5-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-5-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-5-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-5-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-5-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-5-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-5-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-5-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-5-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-5-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="destroyer.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Akizuki.png " alt="Akizuki "></th>
+                    <th>
+                        <p id="healthDE1-1-2">2</p>
+                        <p id="healthDE1-1-1" style="display: none;">1</p>
+                        <p id="healthDE1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>6</th>
+                    <td>
+                        <img id="CV-1-6-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-6-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-6-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-6-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-6-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-6-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-6-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-6-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-6-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-6-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-6-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-6-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-6-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="submarine.png" alt=""></th>
+                    <th class="th2 "><img src="IJN I-400.png " alt="I-400 "></th>
+                    <th>
+                        <p id="healthSS1-1-2">2</p>
+                        <p id="healthSS1-1-1" style="display: none;">1</p>
+                        <p id="healthSS1-1-0" style="display: none;">0</p>
+                    </th>
+                    <th>7</th>
+                    <td>
+                        <img id="CV-1-7-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-7-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-7-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-7-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-7-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-7-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-1-7-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-1-7-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-1-7-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-1-7-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-1-7-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="DE-1-7-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-1-7-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+            </table>
+            <table id="table2" style="display: none">
+                <tr>
+                    <th>艦種</th>
+                    <th>圖示</th>
+                    <th>血量</th>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="carrier.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Shokaku.png" alt="Shokaku "></th>
+                    <th>
+                        <p id="healthCV1-2-5">5</p>
+                        <p id="healthCV1-2-4" style="display: none;">4</p>
+                        <p id="healthCV1-2-3" style="display: none;">3</p>
+                        <p id="healthCV1-2-2" style="display: none;">2</p>
+                        <p id="healthCV1-2-1" style="display: none;">1</p>
+                        <p id="healthCV1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>1</th>
+                    <td>
+                        <img id="hit1-1-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-1-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-1-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-1-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-1-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-1-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-1-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-1-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="battleship.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Yamato.png " alt="Yamato "></th>
+                    <th>
+                        <p id="healthBB1-2-7">7</p>
+                        <p id="healthBB1-2-6" style="display: none;">6</p>
+                        <p id="healthBB1-2-5" style="display: none;">5</p>
+                        <p id="healthBB1-2-4" style="display: none;">4</p>
+                        <p id="healthBB1-2-3" style="display: none;">3</p>
+                        <p id="healthBB1-2-2" style="display: none;">2</p>
+                        <p id="healthBB1-2-1" style="display: none;">1</p>
+                        <p id="healthBB1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>2</th>
+                    <td>
+                        <img id="hit1-2-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-2-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-2-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-2-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-2-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-2-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-2-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-2-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Ibuki.png " alt="Ibuki "></th>
+                    <th>
+                        <p id="healthCA1-2-4">4</p>
+                        <p id="healthCA1-2-3" style="display: none;">3</p>
+                        <p id="healthCA1-2-2" style="display: none;">2</p>
+                        <p id="healthCA1-2-1" style="display: none;">1</p>
+                        <p id="healthCA1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>3</th>
+                    <td>
+                        <img id="hit1-3-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-3-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-3-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-3-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-3-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-3-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-3-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-3-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Yahagi.png " alt="Yahagi "></th>
+                    <th>
+                        <p id="healthCL1-2-4">4</p>
+                        <p id="healthCL1-2-3" style="display: none;">3</p>
+                        <p id="healthCL1-2-2" style="display: none;">2</p>
+                        <p id="healthCL1-2-1" style="display: none;">1</p>
+                        <p id="healthCL1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>4</th>
+                    <td>
+                        <img id="hit1-4-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-4-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-4-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-4-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-4-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-4-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-4-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-4-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="destroyer.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Shimakaze.png " alt="Shimakaze "></th>
+                    <th>
+                        <p id="healthDD1-2-2">2</p>
+                        <p id="healthDD1-2-1" style="display: none;">1</p>
+                        <p id="healthDD1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>5</th>
+                    <td>
+                        <img id="hit1-5-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-5-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-5-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-5-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-5-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-5-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-5-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-5-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="destroyer.png" alt=""></th>
+                    <th class="th2 "><img src="IJN Akizuki.png " alt="Akizuki "></th>
+                    <th>
+                        <p id="healthDE1-2-2">2</p>
+                        <p id="healthDE1-2-1" style="display: none;">1</p>
+                        <p id="healthDE1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>6</th>
+                    <td>
+                        <img id="hit1-6-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-6-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-6-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-6-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-6-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-6-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-6-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-6-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th1 "><img src="submarine.png" alt=""></th>
+                    <th class="th2 "><img src="IJN I-400.png " alt="I-400 "></th>
+                    <th>
+                        <p id="healthSS1-2-2">2</p>
+                        <p id="healthSS1-2-1" style="display: none;">1</p>
+                        <p id="healthSS1-2-0" style="display: none;">0</p>
+                    </th>
+                    <th>7</th>
+                    <td>
+                        <img id="hit1-7-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-7-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-7-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-7-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-7-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-7-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit1-7-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis1-7-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-sm-6" style="text-align: center;">
+            <table id="table3" style="display: none ">
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th></th>
+                    <th>血量</th>
+                    <th>圖示</th>
+                    <th>艦種</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-1-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-1-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-1-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-1-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-1-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-1-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-1-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-1-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>1</th>
+                    <th>
+                        <p id="healthCV2-1-5">5</p>
+                        <p id="healthCV2-1-4" style="display: none;">4</p>
+                        <p id="healthCV2-1-3" style="display: none;">3</p>
+                        <p id="healthCV2-1-2" style="display: none;">2</p>
+                        <p id="healthCV2-1-1" style="display: none;">1</p>
+                        <p id="healthCV2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Midway.png " alt="Midway "></th>
+                    <th class="th1 "><img src="carrier.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-2-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-2-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-2-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-2-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-2-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-2-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-2-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-2-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>2</th>
+                    <th>
+                        <p id="healthCVL2-1-5">5</p>
+                        <p id="healthCVL2-1-4" style="display: none;">4</p>
+                        <p id="healthCVL2-1-3" style="display: none;">3</p>
+                        <p id="healthCVL2-1-2" style="display: none;">2</p>
+                        <p id="healthCVL2-1-1" style="display: none;">1</p>
+                        <p id="healthCVL2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Saipan.png " alt="Saipan "></th>
+                    <th class="th1 "><img src="carrier.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-3-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-3-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-3-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-3-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-3-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-3-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-3-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-3-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>3</th>
+                    <th>
+                        <p id="healthBB2-1-7">7</p>
+                        <p id="healthBB2-1-6" style="display: none;">6</p>
+                        <p id="healthBB2-1-5" style="display: none;">5</p>
+                        <p id="healthBB2-1-4" style="display: none;">4</p>
+                        <p id="healthBB2-1-3" style="display: none;">3</p>
+                        <p id="healthBB2-1-2" style="display: none;">2</p>
+                        <p id="healthBB2-1-1" style="display: none;">1</p>
+                        <p id="healthBB2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Iowa.png " alt="Iowa "></th>
+                    <th class="th1 "><img src="battleship.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-4-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-4-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-4-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-4-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-4-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-4-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-4-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-4-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>4</th>
+                    <th>
+                        <p id="healthCA2-1-4">4</p>
+                        <p id="healthCA2-1-3" style="display: none;">3</p>
+                        <p id="healthCA2-1-2" style="display: none;">2</p>
+                        <p id="healthCA2-1-1" style="display: none;">1</p>
+                        <p id="healthCA2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Baltimore.png " alt="Baltimore "></th>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-5-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-5-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-5-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-5-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-5-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-5-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-5-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-5-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>5</th>
+                    <th>
+                        <p id="healthCL2-1-4">4</p>
+                        <p id="healthCL2-1-3" style="display: none;">3</p>
+                        <p id="healthCL2-1-2" style="display: none;">2</p>
+                        <p id="healthCL2-1-1" style="display: none;">1</p>
+                        <p id="healthCL2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Cleveland.png " alt="Cleveland "></th>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-6-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-6-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-6-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-6-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-6-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-6-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-6-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-6-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>6</th>
+                    <th>
+                        <p id="healthDD2-1-2">2</p>
+                        <p id="healthDD2-1-1" style="display: none;">1</p>
+                        <p id="healthDD2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Fletcher.png " alt="Fletcher "></th>
+                    <th class="th1 "><img src="destroyer.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="hit2-7-1" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-1" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-7-2" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-2" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-7-3" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-3" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-7-4" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-4" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-7-5" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-5" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-7-6" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-6" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="hit2-7-7" src="green.png" alt="" style="display: none;">
+                        <img id="mis2-7-7" src="red.png" alt="" style="display: none;">
+                    </td>
+                    <th>7</th>
+                    <th>
+                        <p id="healthSS2-1-2">2</p>
+                        <p id="healthSS2-1-1" style="display: none;">1</p>
+                        <p id="healthSS2-1-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Balao.png " alt="Balao "></th>
+                    <th class="th1 "><img src="submarine.png" alt=""></th>
+                </tr>
+            </table>
+            <table id="table4" style="display: none">
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th></th>
+                    <th>血量</th>
+                    <th>圖示</th>
+                    <th>艦種</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-1">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-1">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-1">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-1">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-1">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-1">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-1">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-2">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-2">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-2">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-2">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-2">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-2">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-2">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-3">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-3">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-3">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-3">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-3">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-3">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-3">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-4">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-4">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-4">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-4">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-4">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-4">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-4">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-5">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-5">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-5">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-5">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-5">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-5">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-5">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-6">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-6">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-6">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-6">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-6">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-6">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-6">
+                    </td>
+                    <td>
+                        <img src="carrier.png" alt="" style="display: none;" id="CV-2-1-7">
+                        <img src="carrier.png" alt="" style="display: none;" id="CVL-2-1-7">
+                        <img src="battleship.png" alt="" style="display: none;" id="BB-2-1-7">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CA-2-1-7">
+                        <img src="cruiser.png" alt="" style="display: none;" id="CL-2-1-7">
+                        <img src="destroyer.png" alt="" style="display: none;" id="DD-2-1-7">
+                        <img src="submarine.png" alt="" style="display: none;" id="SS-2-1-7">
+                    </td>
+                    <th>1</th>
+                    <th>
+                        <p id="healthCV2-2-5">5</p>
+                        <p id="healthCV2-2-4" style="display: none;">4</p>
+                        <p id="healthCV2-2-3" style="display: none;">3</p>
+                        <p id="healthCV2-2-2" style="display: none;">2</p>
+                        <p id="healthCV2-2-1" style="display: none;">1</p>
+                        <p id="healthCV2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Midway.png" alt="Midway "></th>
+                    <th class="th1 "><img src="carrier.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="CV-2-2-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-2-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-2-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-2-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-2-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-2-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-2-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-2-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-2-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-2-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-2-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-2-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-2-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <th>2</th>
+                    <th>
+                        <p id="healthCVL2-2-5">5</p>
+                        <p id="healthCVL2-2-4" style="display: none;">4</p>
+                        <p id="healthCVL2-2-3" style="display: none;">3</p>
+                        <p id="healthCVL2-2-2" style="display: none;">2</p>
+                        <p id="healthCVL2-2-1" style="display: none;">1</p>
+                        <p id="healthCVL2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Saipan.png" alt="Saipan "></th>
+                    <th class="th1 "><img src="carrier.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="CV-2-3-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-3-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-3-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-3-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-3-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-3-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-3-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-3-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-3-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-3-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-3-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-3-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-3-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <th>3</th>
+                    <th>
+                        <p id="healthBB2-2-7">7</p>
+                        <p id="healthBB2-2-6" style="display: none;">6</p>
+                        <p id="healthBB2-2-5" style="display: none;">5</p>
+                        <p id="healthBB2-2-4" style="display: none;">4</p>
+                        <p id="healthBB2-2-3" style="display: none;">3</p>
+                        <p id="healthBB2-2-2" style="display: none;">2</p>
+                        <p id="healthBB2-2-1" style="display: none;">1</p>
+                        <p id="healthBB2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Iowa.png" alt="Iowa "></th>
+                    <th class="th1 "><img src="battleship.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="CV-2-4-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-4-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-4-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-4-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-4-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-4-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-4-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-4-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-4-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-4-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-4-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-4-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-4-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <th>4</th>
+                    <th>
+                        <p id="healthCA2-2-4">4</p>
+                        <p id="healthCA2-2-3" style="display: none;">3</p>
+                        <p id="healthCA2-2-2" style="display: none;">2</p>
+                        <p id="healthCA2-2-1" style="display: none;">1</p>
+                        <p id="healthCA2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Baltimore.png" alt="Baltimore "></th>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="CV-2-5-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-5-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-5-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-5-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-5-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-5-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-5-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-5-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-5-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-5-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-5-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-5-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-5-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <th>5</th>
+                    <th>
+                        <p id="healthCL2-2-4">4</p>
+                        <p id="healthCL2-2-3" style="display: none;">3</p>
+                        <p id="healthCL2-2-2" style="display: none;">2</p>
+                        <p id="healthCL2-2-1" style="display: none;">1</p>
+                        <p id="healthCL2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Cleveland.png" alt="Cleveland "></th>
+                    <th class="th1 "><img src="cruiser.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="CV-2-6-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-6-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-6-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-6-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-6-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-6-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-6-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-6-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-6-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-6-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-6-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-6-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-6-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <th>6</th>
+                    <th>
+                        <p id="healthDD2-2-2">2</p>
+                        <p id="healthDD2-2-1" style="display: none;">1</p>
+                        <p id="healthDD2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Fletcher.png" alt="Fletcher "></th>
+                    <th class="th1 "><img src="destroyer.png" alt=""></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img id="CV-2-7-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-7-1" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-1" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-1" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-1" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-1" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-7-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-7-2" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-2" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-2" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-2" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-2" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-7-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-7-3" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-3" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-3" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-3" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-3" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-7-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVl-2-7-4" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-4" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-4" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-4" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-4" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-7-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-7-5" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-5" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-5" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-5" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-5" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-7-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-7-6" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-6" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-6" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-6" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-6" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <td>
+                        <img id="CV-2-7-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="CVL-2-7-7" src="carrier.png" alt="" style="display: none;">
+                        <img id="BB-2-7-7" src="battleship.png" alt="" style="display: none;">
+                        <img id="CA-2-7-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="CL-2-7-7" src="cruiser.png" alt="" style="display: none;">
+                        <img id="DD-2-7-7" src="destroyer.png" alt="" style="display: none;">
+                        <img id="SS-2-7-7" src="submarine.png" alt="" style="display: none;">
+                    </td>
+                    <th>7</th>
+                    <th>
+                        <p id="healthSS2-2-2">2</p>
+                        <p id="healthSS2-2-1" style="display: none;">1</p>
+                        <p id="healthSS2-2-0" style="display: none;">0</p>
+                    </th>
+                    <th class="th2 "><img src="USS Balao.png" alt="Balao "></th>
+                    <th class="th1 "><img src="submarine.png" alt=""></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div style="display: none;" class="row" id="turns">
+        <div class="col-sm-2">
+            <h2>Turn</h2>
+            <p id="player1">玩家1</p>
+            <p id="player2" style="display: none;">玩家2</p>
+        </div>
+        <div class="col-sm-4">
+            <p id="shokaku">
+                <img src="carrier.png" alt=""><img src="IJN Shokaku.png" alt="">
+                <br> IJN Shokaku
+            </p>
+            <p id="yamato" style="display: none;">
+                <img src="battleship.png" alt=""><img src="IJN Yamato.png" alt="">
+                <br> IJN Yamato
+            </p>
+            <p id="ibuki" style="display: none;">
+                <img src="cruiser.png" alt=""><img src="IJN Ibuki.png" alt="">
+                <br> IJN Ibuki
+            </p>
+            <p id="yahagi" style="display: none;">
+                <img src="cruiser.png" alt=""><img src="IJN Yahagi.png" alt="">
+                <br> IJN Yahagi
+            </p>
+            <p id="shimakaze" style="display: none;">
+                <img src="destroyer.png" alt=""><img src="IJN Shimakaze.png" alt="">
+                <br> IJN Shimakaze
+            </p>
+            <p id="akizuki" style="display: none;">
+                <img src="destroyer.png" alt=""><img src="IJN Akizuki.png" alt="">
+                <br> IJN Akizuki
+            </p>
+            <p id="i-400" style="display: none;">
+                <img src="submarine.png" alt=""><img src="IJN I-400.png" alt="">
+                <br> IJN I-400
+            </p>
+            <p id="midway" style="display: none;">
+                <img src="carrier.png" alt=""><img src="USS Midway.png" alt="">
+                <br> USS Midway
+            </p>
+            <p id="saipan" style="display: none;">
+                <img src="carrier.png" alt=""><img src="USS Saipan.png" alt="">
+                <br> USS Saipan
+            </p>
+            <p id="iowa" style="display: none;">
+                <img src="battleship.png" alt=""><img src="USS Iowa.png" alt="">
+                <br> USS Iowa
+            </p>
+            <p id="baltimore" style="display: none;">
+                <img src="cruiser.png" alt=""><img src="USS Baltimore.png" alt="">
+                <br> USS Baltimore
+            </p>
+            <p id="cleveland" style="display: none;">
+                <img src="cruiser.png" alt=""><img src="USS Cleveland.png" alt="">
+                <br> USS Cleveland
+            </p>
+            <p id="fletcher" style="display: none;">
+                <img src="destroyer.png" alt=""><img src="USS Fletcher.png" alt="">
+                <br> USS Fletcher
+            </p>
+            <p id="balao" style="display: none;">
+                <img src="submarine.png" alt=""><img src="USS Balao.png" alt="">
+                <br> USS Balao
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <p id="placement">請放置你的船支</p>
+            <p id="attack" style="display: none;">請選擇攻擊的座標</p>
+            <input type="number" id="x1" placeholder="請輸入x座標" style="width: 160px;">
+            <input type="number" id="y1" placeholder="請輸入y座標" style="width: 160px;">
+            <input type="submit" id="confirm1-1" value="下一艘" class="btn-danger button2">
+            <input type="submit" id="confirm1-2" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm1-3" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm1-4" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm1-5" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm1-6" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm1-7" value="完成部署" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-1" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-2" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-3" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-4" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-5" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-6" value="下一艘" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="confirm2-7" value="完成部署" class="btn-danger button2" style="display: none;">
+            <input type="number" id="x2" placeholder="請輸入x座標" style="width: 160px;display: none;">
+            <input type="number" id="y2" placeholder="請輸入y座標" style="width: 160px;display: none;">
+        </div>
+        <div class="col-sm-2">
+            <br>
+            <input type="submit" id="attack1-1" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack1-2" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack1-3" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack1-4" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack1-5" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack1-6" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack1-7" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-1" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-2" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-3" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-4" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-5" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-6" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="attack2-7" value="攻擊" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-1" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-2" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-3" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-4" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-5" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-6" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove1-7" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-1" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-2" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-3" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-4" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-5" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-6" value="完成" class="btn-danger button2" style="display: none;">
+            <input type="submit" id="finishMove2-7" value="完成" class="btn-danger button2" style="display: none;">
+        </div>
+    </div>
+    <input type="submit" id="finish" value="完成放置" class="btn-danger button2" style="font-size: 30px; display: none;">
+    <p id="endGame" style="display: none;text-align: center;font-size: 50px">遊戲結束</p>
+    <p id="win1" style="display: none;text-align: center;font-size: 75px">玩家1獲勝</p>
+    <p id="win2" style="display: none;text-align: center;font-size: 75px">玩家2獲勝</p>
+    <input type="submit" id="playAgain" value="再玩一次" class="btn-primary button2" style="font-size: 30px; display: none;">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="RP.js "></script>
+
+</body>
+
+</html>

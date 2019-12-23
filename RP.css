@@ -1,0 +1,62 @@
+body {
+    font: bold;
+    text-align: center;
+    background-color: skyblue;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+div {
+    font-size: 25px;
+}
+
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0px;
+}
+
+table,
+th {
+    border: none;
+    font-size: 15px;
+}
+
+.th1 {
+    width: 60px;
+    text-align: left;
+}
+
+.th2 {
+    width: 125px;
+    text-align: left;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+}
+
+.button2 {
+    border-radius: 5px;
+}
+
+.button2:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 150, 50%);
+}
+
+.button3 {
+    border-radius: 5px;
+    background-color: white;
+    border-color: gray;
+}
+
+.button4:hover {
+    background-color: red;
+}
